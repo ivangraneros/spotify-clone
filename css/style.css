@@ -98,6 +98,15 @@ ul li:hover {
         margin-bottom: 10px;
     }
 
+    img:hover {
+        transform: scale(1.05);
+        transition: 0.3s ease-in-out;
+    }
+
+    h2:hover {
+        color: #1DB954;
+        transition: 0.3s ease-in-out;
+    }
 
     /* reproductor -------> */
 
