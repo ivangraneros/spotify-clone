@@ -1,0 +1,223 @@
+    /* reinicio --------> */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: white;
+    min-height: 100vh;
+}
+
+    /* navbar ---------> */
+
+.navbar {
+    background-color: #333;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+ul li {
+    padding: 30px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+ul li:hover {
+    color: #1DB954;
+    transition: 0.3s;
+}
+
+
+    /* main -------> */
+
+.main-content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.titulo-main {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.parrafo-main {
+    font-size: 24px;
+    color: #666;
+}
+
+    /* sections -------> */
+
+    .reciente {
+        margin: 50px;
+        border: 1px solid #333;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .reciente h2 {
+        margin-bottom: 20px;
+    }
+
+    .lanzamientos {
+        margin: 50px;
+        border: 1px solid #333;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .lanzamientos h2 {
+        margin-bottom: 20px;
+    }
+
+    .favoritos {
+        margin: 50px;
+        border: 1px solid #333;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .favoritos h2 {
+        margin-bottom: 20px;
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    /* reproductor -------> */
+
+.reproductor {
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.info-cancion {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    text-align: left;
+    margin-left: 20px;
+}
+
+#nombre-cancion {
+    font-size: 16px;
+    align-self: center;
+    margin: 0 10px;
+}
+
+#portada {
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.controles {
+    flex: 3;
+    align-content: center;
+    padding: 20px;
+}
+
+.controles button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.audio {
+    flex: 1;
+    text-align: center;
+    margin-right: 20px;
+    padding: 20px;
+    align-content: center;
+}
+
+.slider {
+  /* slider */
+  --slider-width: 100%;
+  --slider-height: 6px;
+  --slider-bg: rgb(82, 82, 82);
+  --slider-border-radius: 999px;
+  /* level */
+  --level-color: #fff;
+  --level-transition-duration: .1s;
+  /* icon */
+  --icon-margin: 15px;
+  --icon-color: var(--slider-bg);
+  --icon-size: 25px;
+}
+
+.slider {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.slider .volume {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: var(--icon-margin);
+  color: var(--icon-color);
+  width: var(--icon-size);
+  height: auto;
+}
+
+.slider .level {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: var(--slider-width);
+  height: var(--slider-height);
+  background: var(--slider-bg);
+  overflow: hidden;
+  border-radius: var(--slider-border-radius);
+  -webkit-transition: height var(--level-transition-duration);
+  -o-transition: height var(--level-transition-duration);
+  transition: height var(--level-transition-duration);
+  cursor: inherit;
+}
+
+.slider .level::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+  -webkit-box-shadow: -200px 0 0 200px var(--level-color);
+  box-shadow: -200px 0 0 200px var(--level-color);
+}
+
+.slider:hover .level {
+  height: calc(var(--slider-height) * 2);
+}
